@@ -33,6 +33,7 @@ public class MovieController {
         return movieService.getAllMovies();
     }
 
+    // NOTE that curl has to be used to test streaming of events has postman does not support them
     @GetMapping(
             value = "/{id}/events",
             produces= MediaType.TEXT_EVENT_STREAM_VALUE
